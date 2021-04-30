@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "006dcdf6-eec4-4809-ad8e-cfc535d29b84",
+    "name": "Basic Azure DevOps Pipeline Extension",
+    "version": "0.1.0",
+    "publisher": "BarisAkdas",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "src"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "src"
+            }
+        }
+    ]
+}
