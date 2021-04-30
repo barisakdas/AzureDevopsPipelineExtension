@@ -1,5 +1,4 @@
 import tl = require("azure-pipelines-task-lib/task");
-import { Console } from "node:console";
 
 // ## We need a function to get our job done.
 async function run() {
