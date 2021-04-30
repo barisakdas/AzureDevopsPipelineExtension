@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "006dcdf6-eec4-4809-ad8e-cfc535d29b84",
+    "name": "JiraEditIssueExtensionForTest",
+    "friendlyName": "SCM - Jira Edit Issue Extension For Test Backlog To Test In Progress",
+    "description": "An extension that automatically organizes assignments and status on Jira.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+        "Release"
+      ],
+    "author": "Barış Akdaş",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 6
+    },
+    "instanceNameFormat": "SCM - Jira Test Extension For Project $(projectName)",
+    "inputs": [
+        {
+            "name": "projectName",
+            "type": "string",
+            "label": "Project Name: ",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Current Project Name"
+        },
+        {
+            "name": "reviewController",
+            "type": "string",
+            "label": "Review Controller: ",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Name of the person who will test the project."
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}
